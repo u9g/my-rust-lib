@@ -6,5 +6,7 @@ jobs:
   check-semver:
     runs-on: ubuntu-latest
     steps:
-    - name: Check semver
-      uses: obi1kenobi/cargo-semver-checks-action@v2
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check semver
+        uses: obi1kenobi/cargo-semver-checks-action@v2
