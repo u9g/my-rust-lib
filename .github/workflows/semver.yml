@@ -10,3 +10,5 @@ jobs:
         uses: actions/checkout@v4
       - name: Check semver
         uses: u9g/cargo-semver-checks-action@HEAD
+        with:
+          pr: true
