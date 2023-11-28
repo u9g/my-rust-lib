@@ -9,4 +9,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check semver
-        uses: u9g/cargo-semver-checks-action
+        uses: u9g/cargo-semver-checks-action@latest
