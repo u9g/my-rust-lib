@@ -10,7 +10,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - run: git checkout HEAD^
       - name: Check semver
         uses: u9g/cargo-semver-checks-action@HEAD
         with:
