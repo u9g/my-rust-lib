@@ -9,6 +9,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check semver
-        uses: u9g/cargo-semver-checks-action@4fcb983d4609d0f8224b1101d4b87e90aa686385
+        uses: u9g/cargo-semver-checks-action@master
         with:
           pr: true
