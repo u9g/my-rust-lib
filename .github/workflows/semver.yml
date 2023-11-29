@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - run: git checkout - 
+      - run: git checkout {{ process.env.GITHUB_HEAD_REF }}
       - name: Check semver
         uses: u9g/cargo-semver-checks-action@HEAD
         with:
