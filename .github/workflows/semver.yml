@@ -1,6 +1,6 @@
 name: Semver
 
-on: [pull_request]
+on: [pull_request_target]
 
 jobs:
   check-semver:
@@ -9,4 +9,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check semver
-        uses: u9g/cargo-semver-checks-action
+        uses: u9g/cargo-semver-checks-action@HEAD
+        with:
+          pr: true
