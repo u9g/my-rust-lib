@@ -12,3 +12,4 @@ jobs:
         uses: u9g/cargo-semver-checks-action@HEAD
         with:
           pr: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
