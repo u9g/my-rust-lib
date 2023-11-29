@@ -9,7 +9,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - run: git checkout HEAD^
       - name: Check semver
         uses: u9g/cargo-semver-checks-action@HEAD
         with:
