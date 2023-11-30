@@ -5,6 +5,8 @@ on: [pull_request_target]
 jobs:
   check-semver:
     runs-on: ubuntu-latest
+    permissions: 
+      issues: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
