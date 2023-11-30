@@ -1,1 +1,1 @@
-pub struct MyPublicStruct;
+pub struct MyPublicStruct(usize);
