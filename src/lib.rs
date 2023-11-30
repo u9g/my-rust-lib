@@ -1,1 +1,1 @@
-pub struct MyPublicStruct;
+ struct MyPublicStruct;
