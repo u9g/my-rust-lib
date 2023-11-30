@@ -9,7 +9,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check semver
+        id: semver
         uses: u9g/cargo-semver-checks-action@no-anno
         with:
           pr: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Update PR with test results
+        uses: edumserrano/find-create-or-update-comment@v2
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body-includes: '<!-- cargo-semver-checks-comment-dont-delete-or-will-create-new-comment -->'
+          comment-author: 'github-actions[bot]'
+          body: |
+            <!-- cargo-semver-checks-comment-dont-delete-or-will-create-new-comment -->
+            ${{ steps.semver.outputs.cargo-semver-checks-output }}
+          edit-mode: replace
