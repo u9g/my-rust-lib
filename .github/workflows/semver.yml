@@ -25,5 +25,7 @@ jobs:
           comment-author: 'github-actions[bot]'
           body: |
             <!-- cargo-semver-checks-comment-dont-delete-or-will-create-new-comment -->
+            ```
             ${{ steps.semver.outputs.cargo-semver-checks-output }}
+            ```
           edit-mode: replace
